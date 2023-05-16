@@ -14,3 +14,4 @@ bool Cowboy::hasBullets(){
 void Cowboy::reload(){
     this -> bullets += 6;
 } 
+//

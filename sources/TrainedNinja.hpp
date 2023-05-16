@@ -12,4 +12,4 @@ public:
     TrainedNinja(std::string name, Point location);
 };
 
-#endif  // OLDNINJA_HPP
+#endif  

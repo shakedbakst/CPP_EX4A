@@ -29,4 +29,4 @@ public:
     std::string print();
 };
 
-#endif  // CHARACTER_HPP
+#endif 

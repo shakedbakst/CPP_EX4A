@@ -3,7 +3,6 @@
 
 #include "Character.hpp"
 #include <iostream>
-//#include <cmath>
 
 using namespace std;
 namespace ariel{};
@@ -19,4 +18,4 @@ public:
     void slash(Character* enemy);
 };
 
-#endif  // NINJA_HPP
+#endif 

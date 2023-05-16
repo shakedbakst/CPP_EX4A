@@ -12,4 +12,4 @@ public:
     OldNinja(std::string name, Point location);
 };
 
-#endif  // OLDNINJA_HPP
+#endif 

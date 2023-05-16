@@ -1,7 +1,6 @@
 #ifndef TEAM_HPP
 #define TEAM_HPP
 
-//#include "Character.hpp"
 #include "Cowboy.hpp"
 #include "YoungNinja.hpp"
 #include "OldNinja.hpp"
@@ -9,7 +8,6 @@
 
 #include <iostream>
 #include <vector>
-//#include <cmath>
 
 
 using namespace std;
@@ -28,4 +26,4 @@ public:
     void print();
 };
 
-#endif  // TEAM_HPP
+#endif

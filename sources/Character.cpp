@@ -46,3 +46,4 @@ void Character::hits(int num){
 string Character::print(){
     return "Name: " + name + ", Location: " + location.print() + ", Hit: " + to_string(hit);
 }
+//

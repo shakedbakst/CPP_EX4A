@@ -2,8 +2,6 @@
 #define POINT_HPP
 
 #include <iostream>
-//#include <cmath>
-//#include <string>
 
 using namespace std;
 namespace ariel{};
@@ -22,4 +20,4 @@ public:
     std::string print();
 };
 
-#endif  // POINT_HPP
+#endif  

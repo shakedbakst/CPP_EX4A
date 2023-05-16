@@ -3,7 +3,7 @@
 
 #include "Character.hpp"
 #include <iostream>
-//#include <string>
+
 
 using namespace std;
 namespace ariel{};
@@ -19,4 +19,4 @@ public:
     void reload();
 };
 
-#endif  // COWBOY_HPP
+#endif 
