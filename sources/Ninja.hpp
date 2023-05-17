@@ -17,5 +17,4 @@ public:
     void move(Character* enemy);
     void slash(Character* enemy);
 };
-
 #endif 

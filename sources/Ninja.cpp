@@ -21,4 +21,3 @@ void Ninja::slash(Character* enemy){
     }
 }
 
-//

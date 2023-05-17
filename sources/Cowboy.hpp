@@ -4,7 +4,6 @@
 #include "Character.hpp"
 #include <iostream>
 
-
 using namespace std;
 namespace ariel{};
 

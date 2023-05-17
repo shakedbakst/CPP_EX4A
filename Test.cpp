@@ -39,7 +39,6 @@ TEST_CASE("charecters class functions") {
     CHECK_EQ(c.getLocation().getY(), 2);
     CHECK_EQ(c.getHits(), 110);
     CHECK_EQ(c.isAlive(), true);
-    CHECK_EQ(c.hasBullets, true);
 
     CHECK_EQ(on.getName(), "sushi");
     CHECK_EQ(on.getLocation().getX(), 3);
@@ -77,6 +76,9 @@ TEST_CASE("Team class functions") {
     team1.add(&tn);
     team2.add(&yn);
 
+    CHECK_THROWS(team1.add(&tn));
+	CHECK_THROWS(team2.add(&yn));
+
     CHECK_EQ(team1.stillAlive(), 1);
     CHECK_EQ(team2.stillAlive(), 1);
 
@@ -93,72 +95,28 @@ TEST_CASE("Ninja class functions") {
     OldNinja on("Sushi", p2);
 
     CHECK_EQ(tn.distance(on), 2.828427);
-    CHECK_EQ(tn.getSpeed(), 12);\
+    CHECK_EQ(tn.getSpeed(), 12);
     CHECK_EQ(on.getSpeed(), 8);
 
     tn.move(&on);
     CHECK_EQ(tn.getLocation().getX(), 3);
     CHECK_EQ(tn.getLocation().getY(), 4);
 
-    tn.slash(on);
-    CHECK_EQ(tn2.getHits(), 110);
+    tn.slash(&on);
+    CHECK_EQ(tn.getHits(), 110);
 }
 
-/*TEST_CASE("Check invalid operations on dead character") {
-    Point p(1, 2);
-    Cowboy c("Tom", p);
-
-    c.getHits(120);
-    CHECK_FALSE(c.isAlive());
-
-    CHECK_THROWS(c.shoot(nullptr));
-    CHECK_THROWS(c.reload());
-    CHECK_THROWS(c.getLocation());
-    CHECK_THROWS(c.getHits());
-}*/
-
-
-/*TEST_CASE("Check reloading") {
-    Point p(1, 2);
-    Cowboy c("Tom", p);
-    c.shoot(&c);
-    CHECK_EQ(c.getHits(), 110);
-
-    c.reload();
-    CHECK_EQ(c.getBullet(), 12);
-}*/
-
-/*TEST_CASE("Check functions") {
+TEST_CASE("Shooting"){
     Point p1(1, 2);
     Point p2(3, 4);
-    Cowboy c1("John", p1);
-    Cowboy c2("Alice", p2);
 
-    CHECK_EQ(c1.distance(c2), 2.828427);
-    CHECK_EQ(c1.hasBullets(), true);
-    //CHECK_EQ(c1.getBullet(), 6);
+    Cowboy c("Tom", p1);
+    OldNinja on("Sushi", p2);
 
-    c1.shoot(&c2);
-    CHECK_EQ(c2.getHP(), 90);
+	CHECK_NOTHROW(c.shoot(&on));
+	CHECK_EQ(on.getHits(), 90);
+    CHECK_NOTHROW(c.shoot(&on));
+	CHECK_EQ(on.getHits(), 50);
+	
+}
 
-    c1.reload();
-    CHECK_EQ(c1.getBullet(), 12);
-}*/
-
-
-/*TEST_CASE("Check character status") {
-    Point p(1, 2);
-    Cowboy c("Tom", p);
-
-    CHECK(c.isAlive());
-
-    c.hit(120);
-    CHECK_FALSE(c.isAlive());
-    CHECK_THROWS(c.shoot(nullptr));
-    CHECK_THROWS(c.reload());
-    CHECK_THROWS(c.getLocation());
-    CHECK_THROWS(c.getHits());
-}*/
-
-
-//

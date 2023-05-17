@@ -11,5 +11,4 @@ class TrainedNinja : public Ninja {
 public:
     TrainedNinja(std::string name, Point location);
 };
-
 #endif  

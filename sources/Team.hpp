@@ -2,6 +2,7 @@
 #define TEAM_HPP
 
 #include "Cowboy.hpp"
+#include "Ninja.hpp"
 #include "YoungNinja.hpp"
 #include "OldNinja.hpp"
 #include "TrainedNinja.hpp"

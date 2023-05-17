@@ -2,6 +2,7 @@
 #include <iostream>
 #include <cmath>
 
+
 Team::Team(Character* lead){
     this -> lead = lead;
 }

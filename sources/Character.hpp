@@ -28,5 +28,4 @@ public:
     void hits(int num);
     std::string print();
 };
-
 #endif 

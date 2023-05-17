@@ -19,5 +19,4 @@ public:
     Point moveTowards(Point src, Point dest, double dist);
     std::string print();
 };
-
 #endif  

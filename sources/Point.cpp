@@ -31,4 +31,3 @@ string Point::print(){
     string str = "(" + to_string(this -> pt_x) + " , " + to_string(this -> pt_y) + " )";
     return str;    
 }
-//
